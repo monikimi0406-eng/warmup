@@ -1,0 +1,93 @@
+/* 画面全体を中央に電卓を配置するための設定 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1c1c1e;
+  font-family: sans-serif;
+}
+
+/* スマホの電卓のような縦長の箱 */
+.calculator {
+  width: 320px;
+  padding: 16px;
+  background-color: #000000;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* 計算結果・入力中の式を表示する画面 */
+.display {
+  padding: 16px 8px;
+  text-align: right;
+  color: #ffffff;
+}
+
+/* 入力中の式（小さめの文字） */
+.expression {
+  font-size: 18px;
+  color: #999999;
+  min-height: 24px;
+  word-break: break-all;
+}
+
+/* 計算結果（大きめの文字） */
+.result {
+  font-size: 48px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+/* ボタンをマス目状（グリッド）に並べる */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ボタンの共通デザイン */
+.btn {
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn:active {
+  filter: brightness(1.3);
+}
+
+/* 数字ボタン */
+.btn-num {
+  background-color: #333333;
+}
+
+/* 四則演算・削除ボタン */
+.btn-op {
+  background-color: #333333;
+  color: #ff9f0a;
+}
+
+/* クリアボタン */
+.btn-clear {
+  background-color: #a5a5a5;
+  color: #000000;
+}
+
+/* イコールボタン */
+.btn-equal {
+  background-color: #ff9f0a;
+}
+
+/* 0ボタンだけ横に2マス分広げて、楕円形にする */
+.btn-zero {
+  grid-column: span 2;
+  border-radius: 32px;
+  text-align: left;
+  padding-left: 24px;
+}
